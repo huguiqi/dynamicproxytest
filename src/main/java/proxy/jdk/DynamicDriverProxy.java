@@ -1,7 +1,8 @@
-package proxy;
+package proxy.jdk;
 
 
 
+import proxy.CarModel;
 import service.BmwCar;
 
 import java.lang.reflect.InvocationHandler;

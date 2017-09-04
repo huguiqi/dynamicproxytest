@@ -20,9 +20,6 @@ public class DriverProxy {
         if ("BC".equals(type)){
             this.carModel = new BENZCar("奔弛");
         }
-        if ("AD".equals(type)){
-            this.carModel = new AudiCar("奥迪");
-        }
     }
 
     public void start(){

@@ -5,7 +5,7 @@ import proxy.CarModel;
 /**
  * Created by guiqi on 2017/9/4.
  */
-public class AudiCar implements CarModel {
+public class AudiCar {
 
     private String name;
 
@@ -14,11 +14,11 @@ public class AudiCar implements CarModel {
     }
 
     public void start() {
-        System.out.println(name+"start");
+        System.out.println(name+"-------start");
     }
 
     public void run() {
-        System.out.println(name+"run");
+        System.out.println(name+"--------run");
     }
 
     public void pause() {
@@ -26,6 +26,6 @@ public class AudiCar implements CarModel {
     }
 
     public void stop() {
-        System.out.println(name+"stop");
+        System.out.println(name+"---------stop");
     }
 }
