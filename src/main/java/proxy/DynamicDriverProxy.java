@@ -16,7 +16,11 @@ public class DynamicDriverProxy implements InvocationHandler{
 
     private Object carModel;
 
-
+    /**
+     * 绑定并返回代理类
+     * @param target
+     * @return
+     */
     public Object bind(Object target){
         this.carModel = target;
         return Proxy.newProxyInstance(target.getClass().getClassLoader(),target.getClass().getInterfaces(),this);
