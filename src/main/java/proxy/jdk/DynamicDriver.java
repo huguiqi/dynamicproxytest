@@ -13,7 +13,7 @@ import java.lang.reflect.Proxy;
  * Created by guiqi on 2017/9/4.
  * 这是jdk动态代理
  */
-public class DynamicDriverProxy implements InvocationHandler{
+public class DynamicDriver implements InvocationHandler{
 
     private Object carModel;
 
@@ -22,7 +22,7 @@ public class DynamicDriverProxy implements InvocationHandler{
      * @param target
      * @return
      */
-    public Object bind(Object target){
+    public Object getInstance(Object target){
         this.carModel = target;
         return Proxy.newProxyInstance(target.getClass().getClassLoader(),target.getClass().getInterfaces(),this);
     }
@@ -40,8 +40,8 @@ public class DynamicDriverProxy implements InvocationHandler{
 
 
     public static void main(String[] args) {
-        DynamicDriverProxy proxy = new DynamicDriverProxy();
-        CarModel carModel =(CarModel) proxy.bind(new BmwCar("BMW"));
+        DynamicDriver driver = new DynamicDriver();
+        CarModel carModel =(CarModel) driver.getInstance(new BmwCar("BMW"));
         carModel.start();
         carModel.run();
     }

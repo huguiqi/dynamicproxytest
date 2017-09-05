@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 /**
  * Created by guiqi on 2017/9/4.
  */
-public class DynamicProxyCglib implements MethodInterceptor{
+public class DynamicDriverCglib implements MethodInterceptor{
 
     private Object target;
 
@@ -60,8 +60,9 @@ public class DynamicProxyCglib implements MethodInterceptor{
     }
 
     public static void main(String[] args) {
-        DynamicProxyCglib proxy = new DynamicProxyCglib();
-        AudiCar carModel =(AudiCar) proxy.getInstance(new AudiCar("AUDO"),new Class[]{String.class},new Object[]{"AUDI"});
+        DynamicDriverCglib driver = new DynamicDriverCglib();
+        //生成了AudiCar的子类，将切面逻辑加入到
+        AudiCar carModel =(AudiCar) driver.getInstance(new AudiCar("AUDO"),new Class[]{String.class},new Object[]{"AUDI"});
         carModel.start();
         carModel.run();
     }

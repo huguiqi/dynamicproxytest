@@ -1,5 +1,7 @@
-D:\github_project\dynamicproxytest\src\main\java\BENZCar.java
+D:\github_project\dynamicproxytest\src\main\java\service\BENZCar.java
+D:\github_project\dynamicproxytest\src\main\java\proxy\CarModel.java
 D:\github_project\dynamicproxytest\src\main\java\proxy\DriverProxy.java
-D:\github_project\dynamicproxytest\src\main\java\CarModel.java
-D:\github_project\dynamicproxytest\src\main\java\AudiCar.java
-D:\github_project\dynamicproxytest\src\main\java\BmwCar.java
+D:\github_project\dynamicproxytest\src\main\java\proxy\jdk\DynamicDriverProxy.java
+D:\github_project\dynamicproxytest\src\main\java\service\AudiCar.java
+D:\github_project\dynamicproxytest\src\main\java\proxy\cglib\DynamicProxyCglib.java
+D:\github_project\dynamicproxytest\src\main\java\service\BmwCar.java
