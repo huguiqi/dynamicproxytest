@@ -43,9 +43,9 @@ public class DynamicDriverCglib implements MethodInterceptor{
      * @param <T>           <泛型方法>
      * @return              返回跟代理对象类型
      */
-    public <T> T getInstance(T target,Class[] args,Object[] argsValue){
+    public <T> T getInstance(Class clazz,Class[] args,Object[] argsValue){
         Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(target.getClass());
+        enhancer.setSuperclass(clazz);
         enhancer.setCallback(this);
         return (T) enhancer.create(args,argsValue);
     }
@@ -62,7 +62,7 @@ public class DynamicDriverCglib implements MethodInterceptor{
     public static void main(String[] args) {
         DynamicDriverCglib driver = new DynamicDriverCglib();
         //生成了AudiCar的子类，将切面逻辑加入到
-        AudiCar carModel =(AudiCar) driver.getInstance(new AudiCar("AUDO"),new Class[]{String.class},new Object[]{"AUDI"});
+        AudiCar carModel =(AudiCar) driver.getInstance(AudiCar.class,new Class[]{String.class},new Object[]{"AUDI"});
         carModel.start();
         carModel.run();
     }
