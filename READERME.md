@@ -42,3 +42,6 @@ github地址：
 
     https://github.com/cglib/cglib
 
+## 自定义类加载器
+
+Javassist是一个编辑字节码的框架，可以让你很简单地操作字节码。它可以在运行期定义或修改Class。使用Javassist实现AOP的原理是在字节码加载前直接修改需要切入的方法。这比使用Cglib实现AOP更加高效，并且没太多限制

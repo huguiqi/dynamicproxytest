@@ -1,7 +1,6 @@
 package proxy;
 
 
-import service.AudiCar;
 import service.BENZCar;
 import service.BmwCar;
 
